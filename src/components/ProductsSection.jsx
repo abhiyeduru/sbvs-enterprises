@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PRODUCTS, CATEGORIES, WATER_SIZES } from '../data/products';
+import { PRODUCTS, CATEGORIES, WATER_SIZES, getImageUrl } from '../data/products';
 import ProductCard from './ProductCard';
 import { Package, Search, Droplets, Zap, Wine, Utensils, Sparkles, Send, CheckCircle2 } from 'lucide-react';
 
@@ -153,7 +153,7 @@ export default function ProductsSection({
               <div className="lg:col-span-5 flex items-center justify-center p-4 relative">
                 <div className="relative w-full h-72 sm:h-80 flex items-center justify-center bg-white/5 rounded-2xl backdrop-blur-sm border border-white/10 p-6">
                   <img
-                    src="/images/water.png"
+                    src={getImageUrl('images/water.png')}
                     alt="Packaged Drinking Water"
                     className="max-h-full max-w-full object-contain filter drop-shadow-2xl animate-float"
                   />

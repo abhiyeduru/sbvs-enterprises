@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, PhoneCall, ShieldCheck, MapPin, Sparkles, Droplets, CheckCircle } from 'lucide-react';
+import { getImageUrl } from '../data/products';
 
 export default function Hero({ onExploreClick, onOpenEnquireModal }) {
   return (
@@ -95,7 +96,7 @@ export default function Hero({ onExploreClick, onOpenEnquireModal }) {
 
                 <div className="h-64 sm:h-72 w-full flex items-center justify-center py-4 bg-gradient-to-b from-sky-50/50 to-white rounded-2xl relative">
                   <img
-                    src="/images/water.png"
+                    src={getImageUrl('images/water.png')}
                     alt="SBVS Packaged Drinking Water"
                     className="max-h-full max-w-full object-contain filter drop-shadow-xl group-hover:scale-105 transition-transform duration-500 animate-float"
                   />
@@ -137,7 +138,7 @@ export default function Hero({ onExploreClick, onOpenEnquireModal }) {
 
               {/* Floating Orbiting Product Thumbnail Badges */}
               <div className="hidden sm:flex absolute -bottom-6 -left-6 z-30 glass-card p-3 rounded-2xl items-center gap-3 shadow-xl animate-float border border-white" style={{ animationDelay: '1s' }}>
-                <img src="/images/lemon_soda.png" alt="Lemon Soda" className="w-12 h-12 object-contain" />
+                <img src={getImageUrl('images/lemon_soda.png')} alt="Lemon Soda" className="w-12 h-12 object-contain" />
                 <div className="text-left pr-2">
                   <div className="text-xs font-extrabold text-slate-900">Lemon Soda</div>
                   <div className="text-[10px] text-slate-500 font-semibold">Zesty Carbonated</div>
@@ -145,7 +146,7 @@ export default function Hero({ onExploreClick, onOpenEnquireModal }) {
               </div>
 
               <div className="hidden sm:flex absolute -top-6 -right-6 z-30 glass-card p-3 rounded-2xl items-center gap-3 shadow-xl animate-float border border-white" style={{ animationDelay: '2s' }}>
-                <img src="/images/orange_drink.png" alt="Orange Drink" className="w-12 h-12 object-contain" />
+                <img src={getImageUrl('images/orange_drink.png')} alt="Orange Drink" className="w-12 h-12 object-contain" />
                 <div className="text-left pr-2">
                   <div className="text-xs font-extrabold text-slate-900">Orange Drink</div>
                   <div className="text-[10px] text-slate-500 font-semibold">Citrus Refreshment</div>

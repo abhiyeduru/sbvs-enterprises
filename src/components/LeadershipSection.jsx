@@ -1,12 +1,13 @@
 import React from 'react';
 import { UserCheck, Award, Briefcase, Sparkles, ShieldCheck } from 'lucide-react';
+import { getImageUrl } from '../data/products';
 
 export default function LeadershipSection() {
   const leaders = [
     {
       name: 'Ganesh Chowdary',
       role: 'Chairman & Founder',
-      image: '/images/ganesh_chowdary.png',
+      image: getImageUrl('images/ganesh_chowdary.png'),
       badge: 'Founder & Visionary',
       bio: 'Envisioned and established SBVS ENTERPRISES to deliver high-quality, pure packaged drinking water, sodas, and authentic food products across East Godavari and regional Andhra Pradesh.',
       highlights: ['Brand Foundation', 'Operational Excellence', 'Quality Commitment']
@@ -14,7 +15,7 @@ export default function LeadershipSection() {
     {
       name: 'Anu',
       role: 'Director – Marketing & Business Development',
-      image: '/images/anu_director.png',
+      image: getImageUrl('images/anu_director.png'),
       badge: 'Strategic Growth',
       bio: 'Drives market expansion, B2B distributor networks, merchant partnerships, and strategic business development to strengthen SBVS ENTERPRISES as a trusted FMCG brand.',
       highlights: ['B2B & Retail Growth', 'Distributor Relations', 'Market Expansion']
