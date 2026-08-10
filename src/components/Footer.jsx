@@ -115,23 +115,27 @@ export default function Footer({ onOpenEnquireModal }) {
                 </span>
               </div>
 
-              <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-sky-400 shrink-0" />
-                <span className="text-slate-300">
-                  Phone: {COMPANY_INFO.contact.phonePlaceholder}
-                </span>
-              </div>
-
-              <div className="flex items-center gap-2.5">
-                <MessageSquare className="w-4 h-4 text-emerald-400 shrink-0" />
-                <a
-                  href={COMPANY_INFO.contact.whatsappUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-emerald-400 hover:underline"
-                >
-                  Connect via WhatsApp
-                </a>
+              <div className="space-y-1.5 pt-1">
+                <div className="flex items-start gap-2.5">
+                  <Phone className="w-4 h-4 text-sky-400 shrink-0 mt-1" />
+                  <div className="space-y-1">
+                    {COMPANY_INFO.contact.phones.map((phone, idx) => (
+                      <div key={idx} className="flex items-center gap-2 text-slate-300">
+                        <a href={phone.callUrl} className="hover:text-sky-400 transition-colors">
+                          {phone.display}
+                        </a>
+                        <a
+                          href={phone.whatsappUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-[10px] text-emerald-400 hover:underline"
+                        >
+                          (WhatsApp)
+                        </a>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
 
               <div className="flex items-center gap-2.5">

@@ -94,15 +94,15 @@ export default function Hero({ onExploreClick, onOpenEnquireModal }) {
                   Featured Product
                 </div>
 
-                <div className="h-64 sm:h-72 w-full flex items-center justify-center py-4 bg-gradient-to-b from-sky-50/50 to-white rounded-2xl relative">
+                <div className="h-64 sm:h-72 w-full flex items-center justify-center p-2 bg-gradient-to-b from-sky-50/50 to-white rounded-2xl relative overflow-hidden">
                   <img
-                    src={getImageUrl('images/water.png')}
-                    alt="SBVS Packaged Drinking Water"
-                    className="max-h-full max-w-full object-contain filter drop-shadow-xl group-hover:scale-105 transition-transform duration-500 animate-float"
+                    src={getImageUrl('images/water.jpg')}
+                    alt="Aquelle Packaged Drinking Water"
+                    className="max-h-full max-w-full object-contain rounded-xl filter drop-shadow-xl group-hover:scale-105 transition-transform duration-500 animate-float"
                   />
 
                   {/* Floating Size Pill Badges */}
-                  <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-xl text-xs font-extrabold text-slate-800 shadow-md border border-slate-100 flex items-center gap-1.5">
+                  <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-xl text-xs font-extrabold text-slate-800 shadow-md border border-slate-100 flex items-center gap-1.5 z-20">
                     <Droplets className="w-3.5 h-3.5 text-sky-500" />
                     <span>250ml - 2L Sizes</span>
                   </div>
@@ -111,14 +111,14 @@ export default function Hero({ onExploreClick, onOpenEnquireModal }) {
                 <div className="mt-4 space-y-2 text-left">
                   <div className="flex items-center justify-between">
                     <h3 className="text-xl font-bold text-slate-900 font-heading">
-                      Packaged Drinking Water
+                      Aquelle Packaged Drinking Water
                     </h3>
                     <span className="text-xs font-semibold bg-emerald-100 text-emerald-800 px-2.5 py-0.5 rounded-full">
                       Hygienic PET
                     </span>
                   </div>
                   <p className="text-xs text-slate-600">
-                    Purified drinking water available in 250ml, 300ml, 500ml, 1L & 2L bottles for retail & B2B events.
+                    Pure packaged drinking water available in 250ml, 300ml, 500ml, 1L & 2L bottles for retail & B2B events.
                   </p>
                   
                   <div className="pt-2 flex items-center justify-between">
@@ -126,7 +126,7 @@ export default function Hero({ onExploreClick, onOpenEnquireModal }) {
                       Ready for Delivery
                     </span>
                     <button
-                      onClick={() => onOpenEnquireModal('Packaged Drinking Water')}
+                      onClick={() => onOpenEnquireModal('Aquelle Packaged Drinking Water')}
                       className="text-xs font-bold text-white bg-slate-900 hover:bg-sky-600 px-4 py-2 rounded-xl transition-colors shadow-xs"
                     >
                       Enquire
@@ -138,10 +138,10 @@ export default function Hero({ onExploreClick, onOpenEnquireModal }) {
 
               {/* Floating Orbiting Product Thumbnail Badges */}
               <div className="hidden sm:flex absolute -bottom-6 -left-6 z-30 glass-card p-3 rounded-2xl items-center gap-3 shadow-xl animate-float border border-white" style={{ animationDelay: '1s' }}>
-                <img src={getImageUrl('images/lemon_soda.png')} alt="Lemon Soda" className="w-12 h-12 object-contain" />
+                <img src={getImageUrl('images/lemon_soda.jpg')} alt="Lemon & Salt Soda" className="w-12 h-12 object-cover rounded-xl shadow-xs" />
                 <div className="text-left pr-2">
-                  <div className="text-xs font-extrabold text-slate-900">Lemon Soda</div>
-                  <div className="text-[10px] text-slate-500 font-semibold">Zesty Carbonated</div>
+                  <div className="text-xs font-extrabold text-slate-900">Lemon & Salt Soda</div>
+                  <div className="text-[10px] text-slate-500 font-semibold">Zesty & Salty Fizz</div>
                 </div>
               </div>
 

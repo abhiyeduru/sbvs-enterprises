@@ -79,34 +79,32 @@ export default function ContactSection({ showToast }) {
                   </div>
                 </div>
 
-                {/* Phone Placeholder */}
+                {/* Phone Numbers */}
                 <div className="flex items-start gap-4 text-sm text-slate-700">
                   <div className="w-10 h-10 rounded-2xl bg-teal-50 border border-teal-100 text-teal-600 flex items-center justify-center shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
-                  <div>
-                    <strong className="block text-slate-900 font-bold mb-0.5">Phone Number</strong>
-                    <span className="text-slate-600 text-xs sm:text-sm">
-                      {COMPANY_INFO.contact.phonePlaceholder}
-                    </span>
-                  </div>
-                </div>
-
-                {/* WhatsApp Button Card */}
-                <div className="flex items-start gap-4 text-sm text-slate-700">
-                  <div className="w-10 h-10 rounded-2xl bg-emerald-50 border border-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
-                    <MessageSquare className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <strong className="block text-slate-900 font-bold mb-0.5">WhatsApp</strong>
-                    <a
-                      href={COMPANY_INFO.contact.whatsappUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-xs font-bold text-emerald-600 hover:text-emerald-700 underline inline-flex items-center gap-1"
-                    >
-                      Connect on WhatsApp
-                    </a>
+                  <div className="space-y-1.5">
+                    <strong className="block text-slate-900 font-bold mb-0.5">Phone Numbers</strong>
+                    {COMPANY_INFO.contact.phones.map((phone, idx) => (
+                      <div key={idx} className="flex flex-wrap items-center gap-2 text-xs sm:text-sm">
+                        <a
+                          href={phone.callUrl}
+                          className="font-semibold text-slate-800 hover:text-sky-600 transition-colors"
+                        >
+                          {phone.display}
+                        </a>
+                        <span className="text-slate-300">|</span>
+                        <a
+                          href={phone.whatsappUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-[11px] font-bold text-emerald-600 hover:text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md inline-flex items-center gap-1 border border-emerald-200/60"
+                        >
+                          <MessageSquare className="w-3 h-3 text-emerald-600" /> WhatsApp
+                        </a>
+                      </div>
+                    ))}
                   </div>
                 </div>
 

@@ -25,12 +25,12 @@ export const WATER_SIZES = [
 export const PRODUCTS = [
   {
     id: 'packaged-drinking-water',
-    name: 'Packaged Drinking Water',
+    name: 'Aquelle Packaged Drinking Water',
     category: 'water',
     categoryName: 'Packaged Drinking Water',
-    tagline: 'Pure, refreshing hydration for everyday enjoyment and events.',
-    description: 'SBVS Packaged Drinking Water undergoes multi-stage purification to deliver clean, crisp, and safe drinking water for households, events, B2B wholesale, and hospitality.',
-    image: getImageUrl('images/water.png'),
+    tagline: 'Pure, crisp packaged drinking water in 500ml & multi-size PET bottles.',
+    description: 'Aquelle Packaged Drinking Water undergoes multi-stage purification to deliver clean, crisp, and safe drinking water for households, events, B2B wholesale, and hospitality.',
+    image: getImageUrl('images/water.jpg'),
     sizes: ['250 ml', '300 ml', '500 ml', '1 Litre', '2 Litres'],
     defaultSize: '500 ml',
     badge: 'Core Essential',
@@ -44,27 +44,27 @@ export const PRODUCTS = [
   },
   {
     id: 'lemon-soda',
-    name: 'Lemon Soda',
+    name: 'Lemon & Salt Soda',
     category: 'soda',
     categoryName: 'Soda',
-    tagline: 'Zesty citrus sparkle with a fizzy kick.',
-    description: 'Crisp carbonated soda infused with refreshing lemon flavor. Perfectly balanced for an instant burst of cooling refreshment.',
-    image: getImageUrl('images/lemon_soda.png'),
+    tagline: 'Zesty lemon and tangy salt fizz for instant cooling refreshment.',
+    description: 'BIT 2.0 Lemon & Salt Soda delivers a crisp carbonated blend of citrus lemon and tangy salt flavor. Perfectly balanced for an instant burst of cooling refreshment.',
+    image: getImageUrl('images/lemon_soda.jpg'),
     badge: 'Popular Soda',
     isPopular: true,
-    highlights: ['Zesty Lemon Taste', 'High Carbonation Fizz', 'Perfect Meal Companion']
+    highlights: ['Zesty Lemon & Salt', 'High Carbonation Fizz', 'Instant Refreshment']
   },
   {
     id: 'plain-soda',
-    name: 'Plain Soda',
+    name: 'Plain Soda / Power Soda',
     category: 'soda',
     categoryName: 'Soda',
-    tagline: 'Pure sparkling carbonated soda with strong fizz.',
-    description: 'Crisp, crystal-clear plain carbonated water bottled with strong fizz. Great as a standalone digestive drink or beverage mixer.',
-    image: getImageUrl('images/plain_soda.png'),
-    badge: 'High Fizz',
+    tagline: 'BIT Power Soda - Extra bubbly, crystal clear carbonated soda.',
+    description: 'BIT Power Soda delivers maximum carbonation and intense fizz. Crisp, crystal-clear carbonated soda bottled for instant refreshing energy.',
+    image: getImageUrl('images/plain_soda.jpg'),
+    badge: 'Power Fizz',
     isPopular: false,
-    highlights: ['Pure Sparkling Base', 'Extra Bubbly Carbonation', 'Versatile Beverage Mixer']
+    highlights: ['Maximum Carbonation', 'Extra Bubbly Fizz', 'Versatile Beverage Mixer']
   },
   {
     id: 'zeera-soda',
@@ -191,10 +191,24 @@ export const COMPANY_INFO = {
     full: 'Sy.No. 33, Billavaka (V), S. Agraharam (P), Rowthulapudi (M), East Godavari (Dt.), Andhra Pradesh – 533285, India'
   },
   contact: {
-    phonePlaceholder: '+91 98765 43210',
-    phoneCallUrl: 'tel:+919876543210',
-    whatsappNumber: '919876543210',
-    whatsappUrl: 'https://wa.me/919876543210?text=Hello%20SBVS%20ENTERPRISES%2C%20I%20would%20like%20to%20enquire%20about%20your%20products.',
+    phones: [
+      {
+        number: '9866007536',
+        display: '+91 98660 07536',
+        callUrl: 'tel:+919866007536',
+        whatsappUrl: 'https://wa.me/919866007536?text=Hello%20SBVS%20ENTERPRISES%2C%20I%20would%20like%20to%20enquire%20about%20your%20products.'
+      },
+      {
+        number: '7675898952',
+        display: '+91 76758 98952',
+        callUrl: 'tel:+917675898952',
+        whatsappUrl: 'https://wa.me/917675898952?text=Hello%20SBVS%20ENTERPRISES%2C%20I%20would%20like%20to%20enquire%20about%20your%20products.'
+      }
+    ],
+    phonePlaceholder: '+91 98660 07536 / +91 76758 98952',
+    phoneCallUrl: 'tel:+919866007536',
+    whatsappNumber: '919866007536',
+    whatsappUrl: 'https://wa.me/919866007536?text=Hello%20SBVS%20ENTERPRISES%2C%20I%20would%20like%20to%20enquire%20about%20your%20products.',
     emailPlaceholder: 'enquiry@sbvsenterprises.com',
   }
 };
