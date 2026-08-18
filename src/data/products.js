@@ -43,6 +43,25 @@ export const PRODUCTS = [
     ]
   },
   {
+    id: 'square-drinking-water',
+    name: 'Square Premium Drinking Water',
+    category: 'water',
+    categoryName: 'Packaged Drinking Water',
+    tagline: '100% Pure, mineral balanced packaged drinking water in sleek square PET bottles.',
+    description: 'Square Premium Drinking Water undergoes multi-stage reverse osmosis filtration and mineral balancing, packaged in a stylish, ergonomic 500ml square PET bottle.',
+    image: getImageUrl('images/square_water.png'),
+    sizes: ['500 ml'],
+    defaultSize: '500 ml',
+    badge: 'Premium Square Bottle',
+    isPopular: true,
+    highlights: [
+      '100% Pure & Mineral Balanced',
+      'Reverse Osmosis Purified',
+      'Sleek Ergonomic Square Design',
+      'Scan for Purity Report'
+    ]
+  },
+  {
     id: 'lemon-soda',
     name: 'Lemon & Salt Soda',
     category: 'soda',

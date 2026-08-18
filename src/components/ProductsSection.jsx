@@ -149,16 +149,37 @@ export default function ProductsSection({
                 </div>
               </div>
 
-              {/* Right Big Bottle Display Image */}
+              {/* Right Big Bottle Display Image - Both Aquelle & Square Bottles Side-by-Side */}
               <div className="lg:col-span-5 flex items-center justify-center p-4 relative">
-                <div className="relative w-full h-72 sm:h-80 flex items-center justify-center bg-white/5 rounded-2xl backdrop-blur-sm border border-white/10 p-6">
-                  <img
-                    src={getImageUrl('images/water.png')}
-                    alt="Packaged Drinking Water"
-                    className="max-h-full max-w-full object-contain filter drop-shadow-2xl animate-float"
-                  />
-                  <div className="absolute bottom-4 left-4 bg-sky-500/90 text-white text-xs font-extrabold px-3 py-1.5 rounded-xl shadow-md backdrop-blur-md">
-                    Selected: {selectedWaterSize}
+                <div className="relative w-full h-72 sm:h-80 flex items-center justify-center gap-4 bg-white/5 rounded-2xl backdrop-blur-sm border border-white/10 p-6">
+                  
+                  {/* Aquelle Bottle */}
+                  <div className="flex-1 h-full flex flex-col items-center justify-center">
+                    <img
+                      src={getImageUrl('images/water.png')}
+                      alt="Aquelle Packaged Drinking Water"
+                      className="max-h-[85%] max-w-full object-contain filter drop-shadow-2xl animate-float"
+                    />
+                    <span className="text-xs font-bold text-sky-200 bg-sky-950/80 px-2.5 py-0.5 rounded-md border border-sky-700/50 mt-1">
+                      Aquelle Water
+                    </span>
+                  </div>
+
+                  {/* Square Bottle */}
+                  <div className="flex-1 h-full flex flex-col items-center justify-center">
+                    <img
+                      src={getImageUrl('images/square_water.png')}
+                      alt="Square Premium Drinking Water"
+                      className="max-h-[85%] max-w-full object-contain filter drop-shadow-2xl animate-float"
+                      style={{ animationDelay: '0.9s' }}
+                    />
+                    <span className="text-xs font-bold text-rose-200 bg-rose-950/80 px-2.5 py-0.5 rounded-md border border-rose-700/50 mt-1">
+                      Square Water
+                    </span>
+                  </div>
+
+                  <div className="absolute bottom-3 left-3 bg-sky-500/90 text-white text-[11px] font-extrabold px-2.5 py-1 rounded-xl shadow-md backdrop-blur-md">
+                    Selected Size: {selectedWaterSize}
                   </div>
                 </div>
               </div>

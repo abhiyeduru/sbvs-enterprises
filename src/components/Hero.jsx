@@ -91,45 +91,72 @@ export default function Hero({ onExploreClick, onOpenEnquireModal }) {
               <div className="glass-card rounded-3xl p-6 relative z-20 border border-white/60 shadow-2xl overflow-hidden group">
                 
                 <div className="absolute top-4 right-4 bg-sky-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-md z-30">
-                  Featured Product
+                  Featured Duo
                 </div>
 
-                <div className="h-64 sm:h-72 w-full flex items-center justify-center p-2 bg-gradient-to-b from-sky-50/50 to-white rounded-2xl relative overflow-hidden">
-                  <img
-                    src={getImageUrl('images/water.jpg')}
-                    alt="Aquelle Packaged Drinking Water"
-                    className="max-h-full max-w-full object-contain rounded-xl filter drop-shadow-xl group-hover:scale-105 transition-transform duration-500 animate-float"
-                  />
+                {/* Side by Side Bottles Container */}
+                <div className="h-64 sm:h-72 w-full flex items-center justify-center gap-2 p-2 bg-gradient-to-b from-sky-50/60 via-white to-slate-50 rounded-2xl relative overflow-hidden">
+                  
+                  {/* Aquelle Bottle */}
+                  <div className="flex-1 h-full flex flex-col items-center justify-center relative group/b1">
+                    <img
+                      src={getImageUrl('images/water.jpg')}
+                      alt="Aquelle Packaged Drinking Water"
+                      className="max-h-[85%] max-w-full object-contain rounded-lg filter drop-shadow-xl group-hover/b1:scale-105 transition-transform duration-500 animate-float"
+                    />
+                    <span className="mt-1 text-[11px] font-extrabold text-slate-800 bg-white/90 px-2 py-0.5 rounded-md border border-slate-200/80 shadow-xs">
+                      Aquelle 500ml
+                    </span>
+                  </div>
+
+                  {/* Divider Line */}
+                  <div className="h-3/4 w-[1px] bg-gradient-to-b from-transparent via-sky-200 to-transparent" />
+
+                  {/* Square Bottle */}
+                  <div className="flex-1 h-full flex flex-col items-center justify-center relative group/b2">
+                    <img
+                      src={getImageUrl('images/square_water.png')}
+                      alt="Square Premium Drinking Water"
+                      className="max-h-[85%] max-w-full object-contain rounded-lg filter drop-shadow-xl group-hover/b2:scale-105 transition-transform duration-500 animate-float"
+                      style={{ animationDelay: '0.8s' }}
+                    />
+                    <span className="mt-1 text-[11px] font-extrabold text-rose-700 bg-rose-50 px-2 py-0.5 rounded-md border border-rose-200/80 shadow-xs">
+                      Square 500ml
+                    </span>
+                  </div>
 
                   {/* Floating Size Pill Badges */}
-                  <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-xl text-xs font-extrabold text-slate-800 shadow-md border border-slate-100 flex items-center gap-1.5 z-20">
+                  <div className="absolute bottom-2 left-2 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-xl text-[11px] font-extrabold text-slate-800 shadow-md border border-slate-100 flex items-center gap-1 z-20">
                     <Droplets className="w-3.5 h-3.5 text-sky-500" />
-                    <span>250ml - 2L Sizes</span>
+                    <span>Pure Water Series</span>
                   </div>
                 </div>
 
                 <div className="mt-4 space-y-2 text-left">
                   <div className="flex items-center justify-between">
                     <h3 className="text-xl font-bold text-slate-900 font-heading">
-                      Aquelle Packaged Drinking Water
+                      Packaged Drinking Water
                     </h3>
                     <span className="text-xs font-semibold bg-emerald-100 text-emerald-800 px-2.5 py-0.5 rounded-full">
-                      Hygienic PET
+                      Aquelle & Square
                     </span>
                   </div>
                   <p className="text-xs text-slate-600">
-                    Pure packaged drinking water available in 250ml, 300ml, 500ml, 1L & 2L bottles for retail & B2B events.
+                    Premium purified drinking water in standard Aquelle PET bottles & stylish Square RO mineral balanced bottles.
                   </p>
                   
-                  <div className="pt-2 flex items-center justify-between">
-                    <span className="text-xs font-semibold text-sky-700 bg-sky-50 px-2.5 py-1 rounded-lg">
-                      Ready for Delivery
-                    </span>
+                  <div className="pt-2 flex items-center justify-between gap-2">
                     <button
                       onClick={() => onOpenEnquireModal('Aquelle Packaged Drinking Water')}
-                      className="text-xs font-bold text-white bg-slate-900 hover:bg-sky-600 px-4 py-2 rounded-xl transition-colors shadow-xs"
+                      className="flex-1 text-xs font-bold text-slate-800 bg-slate-100 hover:bg-sky-50 hover:text-sky-700 py-2 rounded-xl border border-slate-200 transition-colors shadow-xs"
                     >
-                      Enquire
+                      Aquelle Water
+                    </button>
+                    <button
+                      onClick={() => onOpenEnquireModal('Square Premium Drinking Water')}
+                      className="flex-1 text-xs font-bold text-white bg-slate-900 hover:bg-sky-600 py-2 rounded-xl transition-colors shadow-xs"
+                    >
+                      Square Water
                     </button>
                   </div>
                 </div>
